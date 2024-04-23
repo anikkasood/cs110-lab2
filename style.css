@@ -10,6 +10,16 @@ body {
 	font-size: 4em;
   }
   
+  p{
+	margin: 8px auto;
+	text-align: left;
+	margin-top: -100px;
+	margin-bottom: 10px;
+	font-size: 2em;
+	position: absolute;
+	color: red;
+  }
+
   .whose_turn {
 	margin: 10px auto;
 	margin-bottom: 20px;
