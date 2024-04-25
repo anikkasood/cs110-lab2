@@ -8,14 +8,21 @@ var istaken = [];
 //make player 1 start
 var player = 1;
 
-console.log("HELLO")
 
 
-;(() => { 
-    console.log("script loaded") 
-    var turnlabel = document.getElementById("player-turn");
-    turnlabel.innerHTML= "x";
-})() 
+console.log("script loaded") 
+
+var turnlabel = document.getElementById("player-turn");
+turnlabel.innerHTML= "X";
+
+var xscore = 0; 
+var yscore = 0; 
+
+var xscore_label = document.getElementById("x-score");
+xscore_label.innerHTML= xscore;
+
+var yscore_label = document.getElementById("y-score");
+yscore_label.innerHTML= yscore;
 
 
 function play(selection) {
@@ -39,18 +46,18 @@ function play(selection) {
         if (player % 2 == 0){
 
             //set the users selection to o in the list
-            item.innerHTML = "o";
+            item.innerHTML = "O";
             takenitem = 1;
             player += 1;
-            turnlabel.innerHTML= "x";
+            turnlabel.innerHTML= "X";
             
         }
         else{
             //player 1 == x
-            item.innerHTML = "x";
+            item.innerHTML = "X";
             takenitem = 1;
             player += 1;
-            turnlabel.innerHTML= "o";
+            turnlabel.innerHTML= "O";
         
         }
     //end of check
