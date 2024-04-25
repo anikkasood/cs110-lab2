@@ -1,7 +1,7 @@
 
 //store all items in the class in a list
 var items = document.getElementsByClassName("xo");
-var printw = document.getElementById("printwinner")
+//var printw = document.getElementById("printwinner")
 //parallel array called 'taken' to prevent overwrite in game
 var istaken = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var grid = ["a", "a", "a", "a", "a", "a", "a", "a", "a"];
@@ -13,13 +13,24 @@ var player = 1;
 
 
 function play(selection) {
+
+    var printw = document.getElementsByClassName("printwinner");
+    var result = document.getElementsByClassName("display_player");
+
     
     //Go to user selection and store in item var.
     var item = items[selection - 1];
   
-    if(player >= 10){
-        //board is full and no one won...? so its a tie
-        // need to restart the board, "click new game" 
+    // if(player >= 10){
+    //     //board is full and no one won...? so its a tie
+    //     // need to restart the board, "click new game" 
+    // }
+
+    if(player%2 == 0){
+        result = "o";
+    }
+    else{
+        result = "x";
     }
 
     if (istaken[selection - 1] == 0){
@@ -45,10 +56,10 @@ function play(selection) {
     //end of check
     }
 
-}
+//}
 
 
-function win(){
+//function win(selection){
     
     //diagonal
     if((grid[0] == grid[4] == grid[8] == "x") || (grid[2] == grid[4] == grid[6] == "x") ){
