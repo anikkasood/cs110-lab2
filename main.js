@@ -8,15 +8,24 @@ var istaken = [];
 //make player 1 start
 var player = 1;
 
+console.log("HELLO")
 
+
+;(() => { 
+    console.log("script loaded") 
+    var turnlabel = document.getElementById("player-turn");
+    turnlabel.innerHTML= "x";
+})() 
 
 
 function play(selection) {
+    var turnlabel = document.getElementById("player-turn");
+    
     
     //Go to user selection and store in item var.
     var item = items[selection - 1];
     var takenitem = istaken[selection - 1];
-
+    
 
     //not working 
     istaken = [0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -33,6 +42,7 @@ function play(selection) {
             item.innerHTML = "o";
             takenitem = 1;
             player += 1;
+            turnlabel.innerHTML= "x";
             
         }
         else{
@@ -40,10 +50,13 @@ function play(selection) {
             item.innerHTML = "x";
             takenitem = 1;
             player += 1;
+            turnlabel.innerHTML= "o";
         
         }
     //end of check
     }
+
+    
     //else do not change square b/c its taken
 
 }
