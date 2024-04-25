@@ -8,8 +8,6 @@ var istaken = [];
 //make player 1 start
 var player = 1;
 
-
-
 console.log("script loaded") 
 
 var turnlabel = document.getElementById("player-turn");
@@ -24,6 +22,8 @@ xscore_label.innerHTML= xscore;
 var yscore_label = document.getElementById("y-score");
 yscore_label.innerHTML= yscore;
 
+//not working 
+istaken = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function play(selection) {
     var turnlabel = document.getElementById("player-turn");
@@ -31,23 +31,17 @@ function play(selection) {
     
     //Go to user selection and store in item var.
     var item = items[selection - 1];
-    var takenitem = istaken[selection - 1];
+    var takenitem = istaken[selection - 1]; // hold istaken prev value
     
-
-    //not working 
-    istaken = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-
+    istaken[selection-1] = 1; // set new istaken value
     
-    //THIS CHECK ISNT WORKING, CAN KEEP SELECTING THE SAME SQR. :(
-    if (takenitem == 0){
+    if (takenitem == 0){ // if it was previously not taken, you can play that space
 
         //player 2 == o
         if (player % 2 == 0){
 
             //set the users selection to o in the list
             item.innerHTML = "O";
-            takenitem = 1;
             player += 1;
             turnlabel.innerHTML= "X";
             
