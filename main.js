@@ -23,14 +23,12 @@ var yscore_label = document.getElementById("y-score");
 yscore_label.innerHTML= yscore;
 
 istaken = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-
 board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-
 
 function play(selection) {
     var turnlabel = document.getElementById("player-turn");
     
-
+    
     //UPDATE THE BOARD
     //Go to user selection and store in item var.
     var item = items[selection - 1];
