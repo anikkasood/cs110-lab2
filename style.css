@@ -21,7 +21,7 @@ body {
   }
 
   
-  p{
+  /* p{
 	margin: 8px auto;
 	text-align: left;
 	margin-top: -100px;
@@ -29,7 +29,7 @@ body {
 	font-size: 2em;
 	position: absolute;
 	color: red;
-  }
+  } */
 
   .whose_turn {
 	margin: 10px auto;
