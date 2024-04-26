@@ -64,9 +64,11 @@ function play(selection) {
         if (winner === "x") {
             xscore += 1; 
             xscore_label.innerHTML = xscore;
+            reset();
         } else if (winner === "y") {
             yscore += 1; 
             yscore_label.innerHTML = yscore;
+            reset();
         }
 
 
@@ -110,9 +112,20 @@ function isWinner(){
         outputWinner.innerHTML = "O Wins!";
         return "y";
     } else {
-        outputWinner.innerHTML = "blah ";
+        outputWinner.innerHTML = "";
         return "a";
     }
 
 }
 
+function reset(){
+
+    for (var i = 0; i < 9; i++) {
+        istaken[i] = 0;
+        items[i].innerHTML = "";
+        items[i].style.backgroundColor = "pink";
+    }
+
+    outputWinner.innerHTML = "";
+
+}
