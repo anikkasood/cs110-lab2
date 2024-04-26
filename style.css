@@ -5,12 +5,17 @@ body {
   }
   
   h1 {
+	display: flex;
+	justify-content: center;
+
 	margin: 16px auto;
 	text-align: center;
 	font-size: 4em;
   }
 
   h2{
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	font-weight: normal;
   }
@@ -81,4 +86,11 @@ body {
 	width: 100%;
 	text-align: center;
   }
+
+  .x-score{
+	display: flex;
+  }
   
+  .space{
+	margin-left: 6px;
+  }
