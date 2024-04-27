@@ -39,7 +39,7 @@ body {
   }
   
   /* Button: NewGame and Reset */
-  .new_game, .reset {
+  .new_game, .reset, .playerNumber {
 	text-align:center;
 	background-color: #ff8c00;
 	color: #000000;
@@ -51,7 +51,7 @@ body {
 	margin: 20px auto;
   }
   
-  .new_game:hover, .reset {
+  .new_game:hover, .reset:hover, .playerNumber:hover {
 	background-color: orange;
   }
   
@@ -75,6 +75,8 @@ body {
 	border: 4px solid black;
 	box-sizing: border-box;
 	position: relative;
+	margin: 0px;
+	padding: 0px;
   }
   
   .xo {
