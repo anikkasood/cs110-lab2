@@ -13,7 +13,7 @@
     
     <h2>Your turn, <div class = "space"></div> <div id = "player-turn"></div></h2>
 
-    <div id = "outputWinner"> </div>
+    <h2>  <div class = "space"></div> <div id = "outputWinner"> </div> </h2>
 
     <div class="game_board">
       <div class='row'>
@@ -33,8 +33,9 @@
       </div>
     </div>
 
-    <button class="new_game">New Game</button>
-    <button class="reset">Reset</button>
+    <button class="new_game" onclick = "newGame()">New Game</button>
+    <button class="reset" onclick = "reset()">Reset</button>
+    <button class="playerNumber" onclick = ""><div id = "playerNumLabel"> </div></button>
 
     <script src="main.js"></script>
     
