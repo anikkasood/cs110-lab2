@@ -2,6 +2,8 @@ Lab 2
 DUE DATE: 4/29/24
 Group members: Anika Sood, Kelsey Musolf
 
+Implemented minmax approach for AI: https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/Links to an external site
+
 Tic Tac Toe game
 
 Basic Requirements
